@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平导航</title>
+    <style>/*样式重置*/
+        *{ margin: 0;
+        padding: 0;}
+    li{
+        list-style:none;
+    }
+    #list {
+        width:420px;
+        height: 30px;
+    }
+
+        #list .item{
+        list-style: none;
+            height: 50px;
+            width: 100px;
+            background: #ff0000;
+            float: left;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 30px;
+
+           /* cursor: pointer;变成手*/
+
+        }
+        #list .item:hover{
+            background: #00ff00;/*变色*/
+        }
+        #list .item >a{
+            color: #fff;
+            text-decoration: none;/*下划线*/
+            height: 30px;
+            width: 100px;
+            display: block;
+
+
+        }
+        #list .submenu{
+            display: none;/*超格隐藏/
+            /*!*width: 100px;*/
+            /*height: 50px;*/
+        }
+    #list .submenu > li {
+        background: #cccccc;
+        cursor: pointer;
+    }
+    #list .submenu >li:hover{
+            background: orange;
+        }
+    #list .item:hover > .submenu {
+        display: block;
+    }
+
+    </style>
+</head>
+<body>
+<ul id="list">
+    <li class="item"><a href="">Link One</li></a>
+    <li class="item"><a href="">Link Two</a></li>
+    <li class="item">
+        <a href="">Link Three</a>
+    <ul class="submenu">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    </li>
+    <li class="item"><a href="">Link Four</a></li>
+</ul>
+<h1>标题</h1>
+</body>
+</html>
